@@ -32,13 +32,14 @@
 </template>
 
 <script>
-
+import axios from "axios"
 export default {
-  data: {
+  data: function() {
+    return  {
     listings: null,
     defaultRedditUrl: "https://www.reddit.com/.json", 
     selectedSubReddit: ""
-  },
+  }},
 
   computed: {
     currentRedditUrl: function() {
