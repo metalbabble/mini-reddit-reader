@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <header>
+        <h2>Simple Reddit Client</h2>
+        <em>Powered by Vue.js ~ metalbabble.com</em>
+    </header>
+
+    <hr />
+    <RedditComponent/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RedditComponent from './components/RedditComponent.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    RedditComponent
   }
 }
 </script>
