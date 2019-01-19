@@ -1,8 +1,8 @@
 <template>
   <div id="app">
         <header>
-        <h2>Simple Reddit Client</h2>
-        <em>Powered by Vue.js ~ metalbabble.com</em>
+        <h2>Mini Reddit Client</h2>
+        <em>~ metalbabble.com ~</em>
     </header>
 
     <hr />
