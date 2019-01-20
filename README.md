@@ -1,5 +1,7 @@
 # mini-reddit-reader
 
+*Mini Reddit Reader* is a small sample vue app that loads listings from Reddit and displays them in a simple fashion.
+
 ## Project setup
 ```
 npm install
