@@ -1,6 +1,5 @@
 <template>
-   <div id="app" class="container">
-
+   <div class="container">
         <!-- Sub select -->
         <div class="panel panel-body panel-info">
             Select a Sub-Reddit:
@@ -21,9 +20,9 @@
 </template>
 
 <script>
-import axios from "axios"
-import ListingComponent from './ListingComponent.vue'
-export default {
+  import axios from "axios"
+  import ListingComponent from './ListingComponent.vue'
+  export default {
 
   name: 'RedditComponent',
 

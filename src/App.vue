@@ -1,11 +1,9 @@
 <template>
   <div id="app">
-        <header>
-        <h2>Mini Reddit Client</h2>
+    <header class="jumbotron container">
+        <h1>Mini Reddit Client</h1>
         <em>~ metalbabble.com ~</em>
     </header>
-
-    <hr />
     <RedditComponent/>
   </div>
 </template>
