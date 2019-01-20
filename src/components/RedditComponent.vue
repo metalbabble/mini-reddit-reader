@@ -14,32 +14,30 @@
         </div>
 
         <!-- Listings -->
-        <div v-for="listing in listings" class="panel panel-primary">
-            <div class="panel-heading">
-                <b>{{ listing.data.title }}</b>
-            </div>
-            <div class="panel-body">
-                {{ listing.data.selftext }}
-                <img v-if="listing.data.thumbnail != 'self'" :src="listing.data.thumbnail" :height="listing.data.thumbnail_height"
-                    :width="listing.data.thumbnail_width" :alt="listing.data.title" />
-            </div>
-            <div class="panel-footer">
-                <em class="pull-right">+ {{ listing.data.ups }}</em>
-                <a :href="listing.data.url" target="_blank" class="btn btn-primary">View on Reddit</a>
-            </div>
+        <div v-for="listing in listings" class="panel panel-primary" :key="listing.id">
+            <ListingComponent :listing="listing"></ListingComponent>
         </div>
     </div>
 </template>
 
 <script>
 import axios from "axios"
+import ListingComponent from './ListingComponent.vue'
 export default {
+
+  name: 'RedditComponent',
+
+  components: {
+    ListingComponent
+  },
+
   data: function() {
-    return  {
-    listings: null,
-    defaultRedditUrl: "https://www.reddit.com/.json", 
-    selectedSubReddit: ""
-  }},
+    return {
+        listings: null,
+        defaultRedditUrl: "https://www.reddit.com/.json", 
+        selectedSubReddit: ""
+        }
+    },
 
   computed: {
     currentRedditUrl: function() {
